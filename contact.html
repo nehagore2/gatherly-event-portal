@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the Gatherly event portal team for event and registration questions.">
+    <title>Contact | Gatherly</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="logo" href="index.html"><span class="logo-mark">g</span><span>gatherly</span></a>
+        <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu" aria-expanded="false">☰</button>
+        <nav class="navigation" id="navigation">
+            <a class="nav-link" href="index.html">Browse events</a>
+            <a class="nav-link" href="registrations.html">My registrations <span class="nav-count" id="navCount">0</span></a>
+            <a class="nav-link active" href="contact.html">Contact</a>
+        </nav>
+        <div class="topbar-right"><span class="today-label" id="todayLabel"></span><div class="profile-circle">G</div></div>
+    </header>
+    <main class="page-shell">
+        <section class="welcome-row">
+            <div><p class="overline">WE'RE HERE TO HELP</p><h1>Let's talk about <span>your next event.</span></h1><p class="welcome-copy">Questions about an event or registration? Send us a message.</p></div>
+        </section>
+        <section class="contact-layout">
+            <div class="content-panel contact-info-panel">
+                <p class="overline">CONTACT INFORMATION</p><h2>Get in touch</h2><p class="contact-intro">Use the form to send a message about event details, registration questions, or general feedback.</p>
+                <div class="contact-info-item"><span class="contact-info-icon">✉</span><div><small>EMAIL</small><strong>hello@gatherly.example</strong><p>For general questions and support</p></div></div>
+                <div class="contact-info-item"><span class="contact-info-icon">◷</span><div><small>SUPPORT HOURS</small><strong>Monday – Friday</strong><p>10:00 AM – 5:00 PM IST</p></div></div>
+                <div class="contact-info-item"><span class="contact-info-icon">▦</span><div><small>EVENT HELP</small><strong>Registration assistance</strong><p>Include the event name and confirmation number if you have one.</p></div></div>
+                <div class="contact-note"><strong>Demo website note</strong><p>This is a project demonstration. The contact form displays an on-screen confirmation and does not send email to a real support team.</p></div>
+            </div>
+            <section class="content-panel contact-form-panel">
+                <h2>Send us a message</h2><p class="contact-intro">Fields marked with * are required.</p>
+                <form id="contactForm" novalidate>
+                    <label>Full name *<input type="text" id="contactName" name="name" placeholder="Your name" required minlength="2"><small class="error-text"></small></label>
+                    <label>Email address *<input type="email" id="contactEmail" name="email" placeholder="you@example.com" required><small class="error-text"></small></label>
+                    <label>What is this about? *<select id="contactTopic" name="topic" required><option value="">Choose a topic</option><option>Event information</option><option>Registration help</option><option>Calendar reminders</option><option>Feedback</option><option>Other</option></select><small class="error-text"></small></label>
+                    <label>Event name or confirmation number <span class="optional-text">Optional</span><input type="text" id="contactReference" name="reference" placeholder="If applicable"></label>
+                    <label>Message *<textarea id="contactMessage" name="message" rows="5" placeholder="Tell us how we can help..." required minlength="10"></textarea><small class="error-text"></small></label>
+                    <button class="button button-primary submit-button" type="submit">Submit message <span>→</span></button>
+                    <p class="privacy-note">Demo only: your message is not sent to a server.</p>
+                </form>
+                <div class="contact-success" id="contactSuccess" hidden><div class="success-check">✓</div><h2>Message prepared</h2><p id="contactSuccessText">Thanks for contacting Gatherly.</p><button class="button button-outline" id="sendAnother" type="button">Send another message</button></div>
+            </section>
+        </section>
+        <footer class="footer"><span>© 2026 Gatherly Event Portal</span><span>Browse · Register · Remember</span></footer>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="js/contact.js"></script>
+</body>
+</html>
